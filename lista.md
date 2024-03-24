@@ -284,7 +284,7 @@ Classe Retangulo herda FormaGeometrica
         -altura
         -largura
 
-    Método CalcularArea(raio){
+    Método CalcularArea(altura, largura){
         var areaRetangulo = altura*largura
         retorne areaRetangulo 
     }
