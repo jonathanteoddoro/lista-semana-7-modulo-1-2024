@@ -238,7 +238,19 @@ ______
 
 **7)** Implemente o pseudocódigo para o algoritmo representado no fluxograma da imagem.
 ![Uma imagem](assets/image.png)
-______
+```
+idade = prompt('Insira sua idade')
+    se (idade<16){
+        escreva "Não pode votar"
+}
+senao se (idade>=16 && idade<18){
+    escreva "Voto facultativo"
+}
+senao{
+    escreva "Voto obrigatório"
+}
+```
+_____
 
 **8)** Considere a implementação da classe base FormaGeometrica em um sistema de modelagem de formas geométricas. Sua tarefa é implementar, utilizando pseudocódigo, as classes derivadas Retangulo e Circulo, que herdam da classe FormaGeometrica, adicionando atributos específicos e métodos para calcular a área de um retângulo e de um círculo, respectivamente.
 
@@ -254,12 +266,54 @@ Classe FormaGeometrica:
         # Implementação genérica para cálculo de área, a ser sobrescrita pelas subclasses.
 
 ```
+**RESPOSTA:**
+```
+Classe Circulo herda FormaGeometrica
+    Atributos:
+        - raio
 
+    Método CalcularArea(raio){
+        let areaCirculo = 3.14*(raio)^2
+        retorne areaCirculo
+    }
+
+
+Classe Retangulo herda FormaGeometrica
+    Atributos:
+        -altura
+        -largura
+
+    Método CalcularArea(raio){
+        var areaRetangulo = altura*largura
+        retorne areaRetangulo 
+    }
+```
 ______
 
 **9)** Você foi contratado(a) como estagiário(a) da Tesla e está participando do desenvolvimento de um programa para simular o desempenho de um carro elétrico em uma corrida. Seu objetivo é determinar em quantos minutos o carro levará para completar uma determinada distância, levando em consideração uma velocidade inicial e uma taxa de aceleração constante. No entanto, você deseja garantir que o carro não exceda uma velocidade máxima nem que a corrida demore mais do que um tempo máximo. Implemente a lógica dessa simulação em pseudocódigo.
 
+```
+Funcao simularCorrida( posicaoFinal, tempoMaximo, aceleracao, velocidadeMaxima)
+//Como exercício não define, assumi que velocidadeInicial, posicaoInicial, e tempoInicial são iguais a 0
+    velocidade = 0
+    posicao = 0
+    tempo = 0
 
+    Enquanto (posicao < posicaoFinal e tempo < tempoMaximo)
+        tempo = tempo + 1
+
+    velocidade x
+
+        se (velocidade<velocidadeMaxima)
+            velocidade = 0 + aceleracao*tempo 
+
+        se (velocidade>=velocidadeMaxima)
+            velocidade = velocidadeMaxima
+        posicao = posicao+velocidade
+
+
+Escreva('Terminou corrida')
+```
 
 ______
 
@@ -289,4 +343,33 @@ matrizB <- [[9, 8, 7], [6, 5, 4], [3, 2, 1]]
 matrizSoma <- SomaDeMatrizes(matrizA, matrizB)
 Escrever("Soma das matrizes:")
 ImprimirMatriz(matrizSoma)
+```
+**RESPOSTA:**
+
+```
+Função MultiplicaçãoDasMatrizes(matrizA, matrizB):
+    # Verifica se as duas matrizes têm o mesmo número de linhas e colunas
+    Se tamanho(matrizA) ≠ tamanho(matrizB) então:
+        Retornar "As matrizes não podem ser multiplicadas. Elas têm dimensões diferentes."
+    Senão:
+        linhas <- tamanho(matrizA)
+        colunas <- tamanho(matrizA[0]) # Considerando que todas as linhas têm o mesmo número de colunas
+        matrizResultado <- novaMatriz(linhas, colunas)
+
+        # Loop para percorrer cada elemento das matrizes e calcular a soma
+        Para i de 0 até linhas-1 faça:
+            Para j de 0 até colunas-1 faça:
+                matrizResultado[i][j] <- matrizA[i][j] + matrizB[i][j]
+
+        Retornar matrizResultado
+
+# Exemplo de uso da função
+matrizA <- [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+matrizB <- [[9, 8, 7], [6, 5, 4], [3, 2, 1]]
+
+matrizSoma <- SomaDeMatrizes(matrizA, matrizB)
+Escrever("Soma das matrizes:")
+ImprimirMatriz(matrizSoma)
+
+
 ```
