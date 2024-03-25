@@ -279,7 +279,7 @@ Classe Circulo herda FormaGeometrica
     atributo raio <- parametro raio
 
   Método CalcularArea(){
-    var areaCirculo = 3.14*(atributo raio)^2
+    var areaCirculo = 3.14*(raio)^2
     retorne areaCirculo
     }
 
@@ -295,7 +295,7 @@ Classe Retangulo herda FormaGeometrica
     atributo altura <- parametro altura
     atributo largura <- parametro largura
 
-  Método CalcularArea(altura, largura){
+  Método CalcularArea(){
     var areaRetangulo = altura*largura
     retorne areaRetangulo 
   }
