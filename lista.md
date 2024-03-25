@@ -270,24 +270,36 @@ Classe FormaGeometrica:
 **RESPOSTA:**
 ```
 Classe Circulo herda FormaGeometrica
-    Atributos:
-        - raio
+  Atributos:
+    - cor
+    - raio
 
-    Método CalcularArea(raio){
-        let areaCirculo = 3.14*(raio)^2
-        retorne areaCirculo
+  Metodo Construtor(cor,raio)
+    atributo cor <- parametro cor
+    atributo raio <- parametro raio
+
+  Método CalcularArea(){
+    var areaCirculo = 3.14*(atributo raio)^2
+    retorne areaCirculo
     }
 
 
 Classe Retangulo herda FormaGeometrica
-    Atributos:
-        -altura
-        -largura
+  Atributos:
+    - cor
+    - altura
+    - largura
 
-    Método CalcularArea(altura, largura){
-        var areaRetangulo = altura*largura
-        retorne areaRetangulo 
-    }
+  Metodo Construtor(cor,altura,largura)
+    atributo cor <- parametro cor
+    atributo altura <- parametro altura
+    atributo largura <- parametro largura
+
+  Método CalcularArea(altura, largura){
+    var areaRetangulo = altura*largura
+    retorne areaRetangulo 
+  }
+
 ```
 ______
 
